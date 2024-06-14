@@ -1,1 +1,1 @@
-export const BACKEND_URL = "https://otp-login-taskk.vercel.app/";
+export const BACKEND_URL = "https://otp-login-taskk.vercel.app";

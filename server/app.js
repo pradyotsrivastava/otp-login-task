@@ -4,18 +4,16 @@ const app = express();
 const cors = require("cors");
 require("./db/conn");
 const router = require("./Routes/router");
-const PORT = 4002 || process.env.PORT;
+const PORT = 4002 || process.env.FRONTEND_URL;
 
 //middleware
 app.use(express.json());
-// app.use(cors());
 app.use(
   cors({
     origin: process.env.FRONTEND_URL,
     credentials: true,
   })
 );
-
 app.use(router);
 
 app.get("/", (req, res) => {
